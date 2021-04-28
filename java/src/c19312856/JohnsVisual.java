@@ -6,14 +6,19 @@ public class JohnsVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
-    Lines l;
     Circle c;
+    MouseCircles mc;
+    Eye eye;
+    Boxes b;
+    Sphere s;
+    Bands band;
+    Floral f;
 
-    float[] lerpedBuffer;
+    float halfWidth = 0;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1024, 500, P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -38,12 +43,19 @@ public class JohnsVisual extends Visual
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         c = new Circle(this);
+        mc = new MouseCircles(this);
+        eye = new Eye(this);
+        b = new Boxes(this);
+        s = new Sphere(this);
+        band = new Bands(this);
+        f = new Floral(this);
 
+        surface.setResizable(true);
     }
 
     public void keyPressed()
     {
-        if (keyCode >= '0' && keyCode <= '6') {
+        if (keyCode >= '0' && keyCode <= '9') {
             which = keyCode - '0';
         }
         if (keyCode == ' ') {
@@ -59,11 +71,12 @@ public class JohnsVisual extends Visual
         }
     }
 
+    private float angle = 0;
 
     public void draw()
     {
         background(0);
-
+        surface.setResizable(true);
         try
         {
             // Call this if you want to use FFT data
@@ -82,24 +95,58 @@ public class JohnsVisual extends Visual
         //abv.render();
         //l.render();
 
+
         switch (which)
         {
             case 0:
-            {
-                wf.render();
-                controls();
-                break;
-            }
-            case 1:
             {
                 abv.render();
                 controls();
                 break;
             }
+            case 1:
+            {
+                wf.render();
+                break;
+            }
             case 2:
             {
                 c.render();
-                controls();
+                putMeFirst();
+                break;
+            }
+            case 3:
+            {
+                f.render();
+                break;
+            }
+            case 4:
+            {
+                fill(0);
+                eye.render();
+                break;
+            }
+            case 5:
+            {
+                b.render();
+                break;
+            }
+            case 6:
+            {
+                s.render();
+                break;
+            }
+            case 7:
+            {
+                if (key == 's' || key == 'S')
+                {
+                    s.render();
+                }
+                
+                wf.render();
+                c.render();
+                eye.render();
+                b.render();
                 break;
             }
             default:
@@ -114,7 +161,27 @@ public class JohnsVisual extends Visual
 
     public void controls()
     {
-        text("Controls: \n\tSPACEBAR:\tStart/Pause Music\n\tR:\tRestart Music/Set background to display frequency and note of music", 10, 20);
+        textSize(20);
+        fill(255);
+        text("Controls: \n\tSPACEBAR:\tStart/Pause Music\n\tR:\tRestart Music", 10, 20);
+    }
+
+    public void putMeFirst()
+    {
+        halfWidth = (width / 2) - (1750 * getSmoothedAmplitude());
+        for(int i = 0 ; i < getAudioBuffer().size() ; i ++)
+        {
+            fill(255);
+                if (getSmoothedAmplitude() < 10)
+                {
+                    textSize(500 * getSmoothedAmplitude());
+                }
+                else
+                {
+                    textSize(10);
+                }
+                text("PUT ME FIRST", halfWidth, 80);
+        }
     }
 }
 
