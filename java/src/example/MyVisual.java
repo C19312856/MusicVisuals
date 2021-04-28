@@ -7,6 +7,7 @@ public class MyVisual extends Visual
     WaveForm wf;
     AudioBandsVisual abv;
 
+
     public void settings()
     {
         size(1024, 500);
