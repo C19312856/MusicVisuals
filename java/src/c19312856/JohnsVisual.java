@@ -13,6 +13,7 @@ public class JohnsVisual extends Visual
     Sphere s;
     Bands band;
     Floral f;
+    Pyramid p;
 
     float halfWidth = 0;
 
@@ -49,6 +50,7 @@ public class JohnsVisual extends Visual
         s = new Sphere(this);
         band = new Bands(this);
         f = new Floral(this);
+        p = new Pyramid(this);
 
         surface.setResizable(true);
     }
@@ -147,6 +149,11 @@ public class JohnsVisual extends Visual
                 c.render();
                 eye.render();
                 b.render();
+                break;
+            }
+            case 8:
+            {
+                p.render();
                 break;
             }
             default:
