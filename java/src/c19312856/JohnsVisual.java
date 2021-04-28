@@ -144,7 +144,6 @@ public class JohnsVisual extends Visual
                 {
                     s.render();
                 }
-                
                 wf.render();
                 c.render();
                 eye.render();
