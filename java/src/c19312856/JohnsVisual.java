@@ -140,6 +140,11 @@ public class JohnsVisual extends Visual
             }
             case 7:
             {
+                p.render();
+                break;
+            }
+            case 8:
+            {
                 if (key == 's' || key == 'S')
                 {
                     s.render();
@@ -148,11 +153,6 @@ public class JohnsVisual extends Visual
                 c.render();
                 eye.render();
                 b.render();
-                break;
-            }
-            case 8:
-            {
-                p.render();
                 break;
             }
             default:
