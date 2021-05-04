@@ -148,6 +148,21 @@ switch (which)
 
 # What I am most proud of in the assignment
 
+I am most proud of the variety of Visuals and the visible progression of the visuals as I worked through the assignment. I took my time with this assignment as it was enjoyable to create beautiful visuals that are used to encapsulate the emotions of ones selected song. Being a fan of music it was great being able to translate this passion into the form of another passion of mine, coding. Unfortunately due to other assignments and other things going on in life I couldn't further explore this, however during the summer I hope to perhaps start my own projects in my free time.
+
+The program presents an evident progression in its complexity as one cycles through the index of the visuals. This culminates in a combination of a few of these visuals together, which I believe is a perfect way to display to feeling of the song "Put me First". As discussed in the Description of the assignment, I used the example visuals as a baseline for the rest of my visuals, adding more complex shapes as we advanced in our lectures.
+
+The "Eye" Visual is perhaps the most unique visuals in the assignment. It resonated within me when I created it as I see music to be something that allows someone to take a metaphorical "look" into someone else's mind, to experience their feelings.
+
+The "Floral" Visual represents the sense of rebirth as the song speaks of moving past an experience and finally putting themselves first over others. I drew inspiration from a video linked in the assignment overview for this visual while researching for the assignment (C18356933).
+
+A sense of minimalism presented by the "Cube" Visual gives a sense of a clean slate, as the musician looks to move onto a new chapter in his life.
+
+This feeling is contrasted by the "Sphere" and "Pyramid" Visuals as they can be seen to display a sense of organised chaos. This could be shown to represent life, particularly it's ups and downs.
+
+The final Visual is a combination of a few of the previous visuals. It represents ones experiences of life. Within all the chaos, if one takes a step back and looks at things individually they may seem a lot more understandable, and thus more peaceful.
+
+
 # Markdown Tutorial
 
 This is *emphasis*

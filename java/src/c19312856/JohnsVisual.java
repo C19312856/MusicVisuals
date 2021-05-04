@@ -35,8 +35,9 @@ public class JohnsVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("Witt Lowry - Put Me First (feat. Josh Golden) (Official Lyric Video).mp3");   
-
+        //loadAudio("Witt Lowry - Put Me First (feat. Josh Golden) (Official Lyric Video).mp3");   
+        //Alternate song
+        loadAudio("EDEN - rock and roll.mp3");   
         
         // Call this instead to read audio from the microphone
         //startListening(); 
