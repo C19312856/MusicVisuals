@@ -20,10 +20,11 @@ public class Pyramid {
 
     float angle = 0;
   
-    float size = 0;
+    float length = 0;
 
     public void render()
     {
+        //Set weights and colours
         jv.colorMode(PApplet.HSB);
         jv.lights();
         jv.noFill();
@@ -31,7 +32,7 @@ public class Pyramid {
         float c = 30 + PApplet.map(jv.getSmoothedAmplitude(), 0, 1, 0, 255);
         jv.stroke(c, 255, 255);
 
-        size = 30 + (500 * jv.getSmoothedAmplitude());
+        length = 30 + (500 * jv.getSmoothedAmplitude());
 
         //Generate waveforms on top and bottom of screen
         for(int i = 0 ; i < jv.getAudioBuffer().size() ; i ++)
@@ -54,25 +55,31 @@ public class Pyramid {
 
         //Code to make Pyramid
         jv.beginShape();
-        jv.vertex(-size, -size, -size);
-        jv.vertex(size, -size, -size);
-        jv.vertex(   0,    0,  size);
 
-        jv.vertex( size, -size, -size);
-        jv.vertex( size,  size, -size);
-        jv.vertex(   0,    0,  size);
+        //Side 1
+        jv.vertex(-length, -length, -length);
+        jv.vertex(length, -length, -length);
+        jv.vertex(   0,    0,  length);
+
+        //Side 2
+        jv.vertex( length, -length, -length);
+        jv.vertex( length,  length, -length);
+        jv.vertex(   0,    0,  length);
    
-        jv.vertex( size, size, -size);
-        jv.vertex(-size, size, -size);
-        jv.vertex(   0,   0,  size);
+        //Side 3
+        jv.vertex( length, length, -length);
+        jv.vertex(-length, length, -length);
+        jv.vertex(   0,   0,  length);
      
-        jv.vertex(-size,  size, -size);
-        jv.vertex(-size, -size, -size);
-        jv.vertex(   0,    0,  size);
+        //Side 4
+        jv.vertex(-length,  length, -length);
+        jv.vertex(-length, -length, -length);
+        jv.vertex(   0,    0,  length);
 
-        jv.vertex(-size,  size, -size);
-        jv.vertex(-size, -size, -size);
-        jv.vertex(   0,    0,  size);
+        //Side 5
+        jv.vertex(-length,  length, -length);
+        jv.vertex(-length, -length, -length);
+        jv.vertex(   0,    0,  length);
         jv.endShape();
 
         angle += 0.01f;

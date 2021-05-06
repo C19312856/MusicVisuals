@@ -154,13 +154,28 @@ The program presents an evident progression in its complexity as one cycles thro
 
 The "Eye" Visual is perhaps the most unique visuals in the assignment. It resonated within me when I created it as I see music to be something that allows someone to take a metaphorical "look" into someone else's mind, to experience their feelings.
 
+![An image](images/eye.png)
+
 The "Floral" Visual represents the sense of rebirth as the song speaks of moving past an experience and finally putting themselves first over others. I drew inspiration from a video linked in the assignment overview for this visual while researching for the assignment (C18356933).
+
+![An image](images/floral.png)
 
 A sense of minimalism presented by the "Cube" Visual gives a sense of a clean slate, as the musician looks to move onto a new chapter in his life.
 
+![An image](images/box.png)
+
 This feeling is contrasted by the "Sphere" and "Pyramid" Visuals as they can be seen to display a sense of organised chaos. This could be shown to represent life, particularly it's ups and downs.
 
+![An image](images/sphere.png)
+
+![An image](images/pyramid.png)
+
 The final Visual is a combination of a few of the previous visuals. It represents ones experiences of life. Within all the chaos, if one takes a step back and looks at things individually they may seem a lot more understandable, and thus more peaceful.
+
+![An image](images/mix.png)
+
+![An image](images/mixWithPyramid.png)
+
 
 
 # Markdown Tutorial

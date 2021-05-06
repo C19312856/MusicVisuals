@@ -4,6 +4,7 @@ import ie.tudublin.*;
 
 public class JohnsVisual extends Visual
 {    
+    //Declare Classes
     WaveForm wf;
     AudioBandsVisual abv;
     Circle c;
@@ -14,6 +15,10 @@ public class JohnsVisual extends Visual
     Bands band;
     Floral f;
     Pyramid p;
+
+    //Variable for toggleable Pyramid Visual in option 8
+    boolean pyramidVisual = false;
+
 
     float halfWidth = 0;
 
@@ -42,6 +47,7 @@ public class JohnsVisual extends Visual
         // Call this instead to read audio from the microphone
         //startListening(); 
         
+        //Instantiate Classes
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         c = new Circle(this);
@@ -61,6 +67,7 @@ public class JohnsVisual extends Visual
         if (keyCode >= '0' && keyCode <= '9') {
             which = keyCode - '0';
         }
+        //Pause/Play Music
         if (keyCode == ' ') {
             if (getAudioPlayer().isPlaying()) {
                 getAudioPlayer().pause();
@@ -68,9 +75,22 @@ public class JohnsVisual extends Visual
                 getAudioPlayer().play();
             }
         }
+        //Restart Music
         if (key == 'r' || key == 'R')
         {
             getAudioPlayer().rewind();
+        }
+        //Toggle for Pyramid Visual in Option 8
+        if (key == 'p' || key == 'P')
+        {
+            if(pyramidVisual == true)
+            {
+                pyramidVisual = false;
+            }
+            else
+            {
+                pyramidVisual = true;
+            }
         }
     }
 
@@ -103,61 +123,72 @@ public class JohnsVisual extends Visual
         {
             case 0:
             {
+                //Simple Audio Band Visual with controls
                 abv.render();
                 controls();
                 break;
             }
             case 1:
             {
+                //Simple waveform Visual
                 wf.render();
                 break;
             }
             case 2:
             {
+                //Simple circle visual with Put Me First title
                 c.render();
                 putMeFirst();
                 break;
             }
             case 3:
             {
+                //Floral Visual
                 f.render();
                 break;
             }
             case 4:
             {
+                //Eye Visual, change fill to black
                 fill(0);
                 eye.render();
                 break;
             }
             case 5:
             {
+                //Boxes visual
                 b.render();
                 break;
             }
             case 6:
             {
+                //Sphere Visual
                 s.render();
                 break;
             }
             case 7:
             {
+                //Pyramid Visual
                 p.render();
                 break;
             }
             case 8:
             {
-                if (key == 's' || key == 'S')
-                {
-                    s.render();
-                }
+                //Mix of Visuals with toggleable Pyramid Visual
                 wf.render();
                 c.render();
                 eye.render();
                 b.render();
+                //Toggleable Pyramid Visual
+                if (pyramidVisual == true)
+                {
+                    p.render();
+                }
                 break;
             }
             default:
             {
+                //Show Controls
                 controls();
             }
         }
@@ -165,19 +196,21 @@ public class JohnsVisual extends Visual
         
                 
     }
-
+    //Method to display controls on first page (0)
     public void controls()
     {
         textSize(20);
         fill(255);
-        text("Controls: \n\tSPACEBAR:\tStart/Pause Music\n\tR:\tRestart Music", 10, 20);
+        text("Controls: \n\tSPACEBAR:\tStart/Pause Music\n\tR:\tRestart Music\n\t0:\tBasic Audio Band Visual/Show Controls\n\t1:\tBasic Waveform Visual\n\t2:\tBasic Ellipse and Title Visual\n\t3:\tFloral Visual\n\t4:\tEye Visual\n\t5:\tDual Box Visual\n\t6:\tSphere Visual\n\t7:\tPyramid Visual\n\t8:\tMix Visual with toggleable Pyramid Visual\n\t\t\t\tp/P:\tToggle Pyramid Visual On/Off", 10, 20);
     }
 
+    //Method to display "Put Me First" Title in option 2
     public void putMeFirst()
     {
         halfWidth = (width / 2) - (1750 * getSmoothedAmplitude());
         for(int i = 0 ; i < getAudioBuffer().size() ; i ++)
         {
+            //Set Colour as white and change text size in accordance to music Amplitude
             fill(255);
                 if (getSmoothedAmplitude() < 10)
                 {
