@@ -25,6 +25,7 @@ public class Floral {
         jv.translate(jv.width / 2, jv.height / 2);
         jv.strokeWeight(2);
         float c = 30 + PApplet.map(jv.getSmoothedAmplitude(), 0, 1, 0, 255);
+        //Create Ellipses
         for (int i = 0; i < 4; i++) 
         {
             jv.fill(c, c + 50, c + 30);

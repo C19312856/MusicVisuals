@@ -9,7 +9,6 @@ public class Eye
     float cy = 0;
     float cx = 0;
     float ca = 0;
-    float angle = 0;
     
 
     public Eye(JohnsVisual jv)
@@ -22,6 +21,7 @@ public class Eye
 
     public void render()
     {
+        //Change colours for shapes
         jv.colorMode(PApplet.HSB);
         for(int i = 0 ; i < jv.getAudioBuffer().size() ; i ++)
         {
@@ -30,12 +30,12 @@ public class Eye
                 , 255
                 , 255
             );
-            
+            //Create central "eye" ellipse
             jv.ellipse(cy, cx, 500 * jv.getAudioBuffer().get(i), 500 * jv.getAudioBuffer().get(i));
 
+            //Create Waveforms
             jv.line(i, cx, cy, cx + cx * jv.getAudioBuffer().get(i));
             jv.line(ca - i, cx, cy, (cx + cx * jv.getAudioBuffer().get(i)));
         }
     }
 }
-//Commit

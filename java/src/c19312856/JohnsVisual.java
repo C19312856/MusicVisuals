@@ -8,11 +8,9 @@ public class JohnsVisual extends Visual
     WaveForm wf;
     AudioBandsVisual abv;
     Circle c;
-    MouseCircles mc;
     Eye eye;
     Boxes b;
     Sphere s;
-    Bands band;
     Floral f;
     Pyramid p;
 
@@ -51,11 +49,9 @@ public class JohnsVisual extends Visual
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         c = new Circle(this);
-        mc = new MouseCircles(this);
         eye = new Eye(this);
         b = new Boxes(this);
         s = new Sphere(this);
-        band = new Bands(this);
         f = new Floral(this);
         p = new Pyramid(this);
 

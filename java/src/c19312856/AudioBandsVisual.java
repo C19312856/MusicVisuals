@@ -14,6 +14,7 @@ public class AudioBandsVisual
 
     public void render()
     {
+        //Change colours and create audio bands
         jv.colorMode(PApplet.HSB);
         float gap = jv.width / (float) jv.getBands().length;
         jv.noStroke();
@@ -24,4 +25,3 @@ public class AudioBandsVisual
         }
     }
 }
-//Commit

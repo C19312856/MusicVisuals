@@ -18,6 +18,7 @@ public class Circle {
 
     public void render()
     {
+        //Change colours for shapes
         jv.colorMode(PApplet.HSB);
         for(int i = 0 ; i < jv.getAudioBuffer().size() ; i ++)
         {
@@ -26,6 +27,7 @@ public class Circle {
                 , 255
                 , 255
             );
+            //Create Ellipse
             jv.ellipse(cy, cx, 500 * jv.getAudioBuffer().get(i), 500 * jv.getAudioBuffer().get(i));
         }
     }

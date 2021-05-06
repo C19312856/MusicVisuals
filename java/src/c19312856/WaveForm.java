@@ -22,6 +22,7 @@ public class WaveForm
 
     public void render()
     {
+        //Change colours for shapes
         jv.colorMode(PApplet.HSB);
         for(int i = 0 ; i < jv.getAudioBuffer().size() ; i ++)
         {
@@ -32,9 +33,9 @@ public class WaveForm
             );
             //jv.ellipse(cy, cx, 500 * jv.getAudioBuffer().get(i), 500 * jv.getAudioBuffer().get(i));
 
+            //Create waveforms
             jv.line(i, cx, i, cx + cx * jv.getAudioBuffer().get(i));
             jv.line(ca - i, cx, ca - i, (cx + cx * jv.getAudioBuffer().get(i)));
         }
     }
 }
-//Commit
