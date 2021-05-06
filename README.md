@@ -175,3 +175,9 @@ The final Visual is a combination of a few of the previous visuals. It represent
 ![An image](images/mix.png)
 
 ![An image](images/mixWithPyramid.png)
+
+# YouTube Video
+
+[![YouTube](https://i9.ytimg.com/vi/CUCfC2Kq3KI/mq3.jpg?sqp=COS-0IQG&rs=AOn4CLDOm6OdVGsVYfh8ppIdoBhrW8E1Og)](https://www.youtube.com/watch?v=CUCfC2Kq3KI)
+
+
